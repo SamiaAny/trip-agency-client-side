@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
+import useAuth from '../../hooks/useAuth';
 import './BookingPackage.css'
 
 const BookingPackage = () => {
     const { bookingId } = useParams();
     const [packageDetails, setPackageDetails] = useState({});
+    const { user } = useAuth();
     const [bookingInfo,setBookingInfo] = useState({});
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -30,9 +32,11 @@ const BookingPackage = () => {
     useEffect(() => {
         let defaults = {
             packagename: packageDetails?.name,
+            name: user?.displayName,
+            email: user?.email
         }
         reset(defaults);
-    }, [packageDetails, reset])
+    }, [packageDetails, user, reset])
 
     // const handlePackageNameChange = e => {
     //     console.log(e.target.value);

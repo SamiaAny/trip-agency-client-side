@@ -1,12 +1,15 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Navmenu.css';
+// import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 
 const Navmenu = () => {
+    const { user, logOut } = useAuth();
     return (
         <div>
-            <Navbar collapseOnSelect bg="" expand="lg">
+            <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
                 <Container>
                     <Navbar.Brand href="#home" className="site-title">Trip Agency</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -14,10 +17,19 @@ const Navmenu = () => {
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/packages">TourPackages</Nav.Link>
-                            <Nav.Link href="">Login</Nav.Link>
-                            <Nav.Link href="">MyOrder</Nav.Link>
-                            <Nav.Link as={Link} to="/manageBooking">Manage All Bookings</Nav.Link>
-                            <Nav.Link href="/addPackage">Add New Package</Nav.Link>
+                            {user?.email && <>
+                                <Nav.Link as={Link} to="/manageBooking">Add New Package</Nav.Link>
+                                <Nav.Link as={Link} to="/manageBooking">MyOrder</Nav.Link>
+                                <Nav.Link as={Link} to="/manageBooking">Manage All Bookings</Nav.Link> </>
+                            }
+                            {
+                                user?.email && <span className="text-white mt-2 mx-3">{user?.displayName}</span>
+                            }
+                            {
+                                user?.email ? <Button onClick={logOut} variant="outline-light">Logout</Button> :
+                                <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                            }
+                            {/* <Nav.Link href="/addPackage">Add New Package</Nav.Link> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
