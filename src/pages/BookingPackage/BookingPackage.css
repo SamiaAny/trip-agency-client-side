@@ -1,0 +1,13 @@
+/* .center-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.booking-form {
+    padding: 5%;
+}
+.booking-form input,textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
