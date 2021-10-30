@@ -16,10 +16,13 @@ const Navmenu = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/packages">TourPackages</Nav.Link>
+                            <Nav.Link as={Link} to="/gallery">TravelGallery</Nav.Link>
+                            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
                             {user?.email && <>
-                                <Nav.Link as={Link} to="/manageBooking">Add New Package</Nav.Link>
-                                <Nav.Link as={Link} to="/manageBooking">MyOrder</Nav.Link>
+                                <Nav.Link as={Link} to="/addPackage">Add New Package</Nav.Link>
+                                <Nav.Link as={Link} to="/myorder">MyOrder</Nav.Link>
                                 <Nav.Link as={Link} to="/manageBooking">Manage All Bookings</Nav.Link> </>
                             }
                             {

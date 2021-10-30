@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Table } from 'react-bootstrap';
-import './ManageAllBookings.css';
+import { Button, Spinner, Table } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
 
-const ManageAllBookings = () => {
-    const [manageBookings, setManageBookings] = useState([]);
-    const [control,setControl] = useState(false);
+const MyOrder = () => {
+    const [myBookings, setMyBookings] = useState([]);
+    const { user } = useAuth();
+    const [control, setControl] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        fetch('https://agile-basin-07002.herokuapp.com/allBookings')
+        setIsLoading(true);
+        fetch(`https://agile-basin-07002.herokuapp.com/allBookings/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setManageBookings(data);
+                setMyBookings(data);
+                setIsLoading(false);
             })
     }, [control]);
 
@@ -31,46 +35,35 @@ const ManageAllBookings = () => {
 
         });
     }
-    // const handleUpdate = (id) => {
-    //     console.log(id);
-    //     const updateData = manageBookings.find(item => item._id === id);
-    //     console.log(updateData);
-    //     setUser(updateData);
-    //     console.log(user);
-    //     fetch(`https://agile-basin-07002.herokuapp.com/allBookings/${id}`,{
-    //         method: 'PUT',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(user)
-    //     }).then()
-    //     //   .then(data => console.log(user))
-    // }
 
     const handleDeleteBooking = (id) => {
         console.log(id)
-        const proceed = window.confirm('Are you sure to delete?');
+        const proceed = window.confirm('Are you sure?');
         console.log(proceed);
-        if(proceed) {
+        if (proceed) {
             fetch(`https://agile-basin-07002.herokuapp.com/allBookings/${id}`,
-            {
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount > 0) {
-                    alert('deleted successfully');
-                    const remaining = manageBookings.filter(item => item._id !== id);
-                    setManageBookings(remaining);
-                }
+                {
+                    method: 'DELETE'
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully');
+                        const remaining = myBookings.filter(item => item._id !== id);
+                        setMyBookings(remaining);
+                    }
 
-            })
+                })
         }
     }
     return (
+
         <div className="booking-part mt-5">
-            <h2 className="text-center mb-5">Manage All Bookings</h2>
+            {
+                isLoading && <Spinner className="spinner-circle" animation="grow" variant="dark" ></Spinner>
+            }
+            <h2 className="text-center mb-5">My Bookings</h2>
             <Table responsive>
                 <thead>
                     <tr>
@@ -85,7 +78,7 @@ const ManageAllBookings = () => {
                     </tr>
                 </thead>
                 {
-                    manageBookings?.map((bookInfo, index) => (
+                    myBookings?.map((bookInfo, index) => (
                         <tbody key={bookInfo._id}>
                             <tr>
                                 <td>{index = index + 1}</td>
@@ -96,14 +89,12 @@ const ManageAllBookings = () => {
                                 <td>{bookInfo?.address}</td>
                                 <td>{bookInfo?.time}</td>
                                 <td>
-                                    {/* <Button onClick={() => handleUpdate(bookInfo?._id)} variant="primary" size="sm">
-                                        {bookInfo?.status}
-                                    </Button>{' '} */}
+                                    
                                     <input type="submit" className="btn btn-primary btn-sm m-1" value={bookInfo?.status || ''} onClick={() => handleUpdate(bookInfo?._id)} />
                                     <Button onClick={() => handleDeleteBooking(bookInfo?._id)} variant="danger" size="sm" className="m-1">
                                         delete
                                     </Button>
-                                    {/* <button onClick={() => handleDeleteBooking(bookInfo?._id)}>X</button> */}
+                                    
                                 </td>
                             </tr>
                         </tbody>
@@ -131,4 +122,4 @@ const ManageAllBookings = () => {
     );
 };
 
-export default ManageAllBookings;
+export default MyOrder;

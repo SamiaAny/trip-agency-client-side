@@ -21,7 +21,7 @@ const BookingPackage = () => {
     });
 
     useEffect(() => {
-        fetch(`http://localhost:5000/packages/${bookingId}`)
+        fetch(`https://agile-basin-07002.herokuapp.com/packages/${bookingId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -63,7 +63,7 @@ const BookingPackage = () => {
         data.status= "pending";
         console.log(data);
         setBookingInfo(data);
-        fetch('http://localhost:5000/allBookings',{
+        fetch('https://agile-basin-07002.herokuapp.com/allBookings',{
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -80,13 +80,15 @@ const BookingPackage = () => {
     
 
     return (
-        <div>
-            <h1 className="text-center">booking {bookingId}</h1>
+        <div className="my-5">
+            <h1 className="text-center mb-5">Book For Your Dream Vacation</h1>
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
                         <div>
-                            <img src={packageDetails?.img} alt="" />
+                            <div className="book-img">
+                                <img src={packageDetails?.img} alt="" />
+                            </div>
                             <h2 className="mt-4">{packageDetails?.name}</h2>
                             <h6>{packageDetails?.location},{packageDetails?.country}</h6>
                             <p>{packageDetails?.description}</p>
@@ -95,7 +97,7 @@ const BookingPackage = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <div className="border p-3">
+                        <div className="border shadow p-3">
                             <h2 className="text-center mb-4">Book this package</h2>
                             <div className="mx-auto center-form">
                                 <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>

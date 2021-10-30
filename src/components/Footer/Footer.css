@@ -1,0 +1,41 @@
+.footer {
+    background-color: #212529;
+    color: #FFFFFF;
+    padding: 70px;
+    color: lightgrey
+}
+
+.brand-logo {
+    font-size: ;
+    color: #ebe5e5;
+}
+
+.brand-desc {
+    color: dimgray;
+}
+
+.menu-item {
+    list-style: none;
+    margin-bottom: 10px;
+    /* color: lightgrey; */
+    font-size: 20px;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.icon-footer {
+    text-align: center;
+}
+
+.icon-footer i {
+    font-size: 30px;
+    /* color: lightgrey; */
+    margin-right: 10px;
+}
+
+.icon-footer i:hover {
+    color: #FFFFFF;
+}

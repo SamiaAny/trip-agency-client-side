@@ -1,7 +1,14 @@
 .App {
   /* text-align: center; */
 }
+.resize-img {
+  width: 400px;
+  height: 400px;
+}
 
+.bg-about {
+  background-image: url("./images/about-bg.jpg");
+}
 .spinner-circle {
   margin-left: 45%;
   margin-top: 10%;

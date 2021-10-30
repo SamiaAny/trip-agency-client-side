@@ -15,9 +15,9 @@ const Banner = () => {
                         src={img1}
                         alt="First slide"
                     />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <Carousel.Caption style={{ color: '#333333' }}>
+                        <h1>Welcome to Trip Agency</h1>
+                        <p>Enjoy your journey with Trip Agency</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -28,8 +28,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h1>Are you ready for your next trip?</h1>
+                        <p>Always try to provide best facilities</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -40,8 +40,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h1>Take your dream vacation</h1>
+                        <p>Enjoy your holiday and explore new places with us</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

@@ -12,57 +12,63 @@
     },
     {
         "key":10102,
-        "name":"Trip to Bichanakandi,Ratargul",
-        "location":"Sylhet",
-        "duration": "2 days/1 night",
-        "groupSize":10,
-        "description":"Bichnakandi is located in Rustampur union of Gowainghat Upazila of Sylhet.Transparent waterway and the flying white clouds on the hills is the main attractive part.In this tour, traveller will find best tour guide.Best facilities of hotel and explore adventures tour.",
+        "name":"Explore Sajek Valley",
+        "location":"Rangamati",
+        "duration": "3 days/2 night",
+        "groupSize":11,
+        "description":"Sajek is located in BAghaichori upazilla of Rangamati.Where you expolre  adventures journey. In this tour, traveller will find best tour guide.Best facilities of hotel and explore adventures tour.",
         "country":"Bangladesh",
-        "price":5000,
-        "img":"https://i.ibb.co/nmnH1hf/bichanakandi.jpg"
+        "price":6000,
+        "img":"https://i.ibb.co/93hqWF2/sajek.jpg"
     },
     {
         "key":10103,
-        "name":"Trip to Bichanakandi,Ratargul",
-        "location":"Sylhet",
+        "name":"Cox's Bazar Beach tour",
+        "location":"Cox's Bazar",
         "duration": "2 days/1 night",
-        "groupSize":10,
-        "description":"Bichnakandi is located in Rustampur union of Gowainghat Upazila of Sylhet.Transparent waterway and the flying white clouds on the hills is the main attractive part.In this tour, traveller will find best tour guide.Best facilities of hotel and explore adventures tour.",
+        "groupSize":7,
+        "description":"If you are a beach lover this trip will be perfect for you.Where you will be find bes hotel facilities.It is famous mostly for its long natural sandy beach.Himchari is located just south of the Cox's Bazar town.You'll also explore this place.",
         "country":"Bangladesh",
         "price":5000,
-        "img":"https://i.ibb.co/nmnH1hf/bichanakandi.jpg"
+        "img":"https://i.ibb.co/h1XJXbc/teknaf.jpg"
     },
     {
         "key":10104,
-        "name":"Trip to Bichanakandi,Ratargul",
-        "location":"Sylhet",
-        "duration": "2 days/1 night",
+        "name":"Nilachol,Nilgiri",
+        "location":"Bandarban",
+        "duration": "3 days/2 night",
         "groupSize":10,
-        "description":"Bichnakandi is located in Rustampur union of Gowainghat Upazila of Sylhet.Transparent waterway and the flying white clouds on the hills is the main attractive part.In this tour, traveller will find best tour guide.Best facilities of hotel and explore adventures tour.",
+        "description":"Nilachol, Nilgiri where you see the hills and clouds parallely.This is a place of spectacular beauty.By this place, you will find the best guide and hotel facilities.The amazing green mountain and the white clouds all around will fascinate you.",
         "country":"Bangladesh",
         "price":5000,
-        "img":"https://i.ibb.co/nmnH1hf/bichanakandi.jpg"
+        "img":"https://i.ibb.co/qYpcRX8/bandarban.jpg"
     },
     {
         "key":10105,
-        "name":"Trip to Bichanakandi,Ratargul",
-        "location":"Sylhet",
+        "name":"Kakata sea beach",
+        "location":" Kalapara Upazila,Patuakhali",
         "duration": "2 days/1 night",
         "groupSize":10,
-        "description":"Bichnakandi is located in Rustampur union of Gowainghat Upazila of Sylhet.Transparent waterway and the flying white clouds on the hills is the main attractive part.In this tour, traveller will find best tour guide.Best facilities of hotel and explore adventures tour.",
+        "description":"Kuakata is a town in southern Bangladesh known for its panoramic sea beach.You will explore the most memorable journey by this trip.Our tour guide always tries to best guidence for exploring many more place",
         "country":"Bangladesh",
         "price":5000,
-        "img":"https://i.ibb.co/nmnH1hf/bichanakandi.jpg"
+        "img":"https://i.ibb.co/b5pyBfY/kuakata.jpg"
     },
     {
         "key":10106,
-        "name":"Trip to Bichanakandi,Ratargul",
-        "location":"Sylhet",
+        "name":"Trip to Thanchi",
+        "location":"Bandarban",
         "duration": "2 days/1 night",
         "groupSize":10,
-        "description":"Bichnakandi is located in Rustampur union of Gowainghat Upazila of Sylhet.Transparent waterway and the flying white clouds on the hills is the main attractive part.In this tour, traveller will find best tour guide.Best facilities of hotel and explore adventures tour.",
+        "description":"Amiyakhum is an extraordinary waterfall or fountain in Bandarban. By this trip, you'll explore amiakhm,nafakhum around bandarban.Spreading milky white foam, it is flowing on the body of the stone will fascinate you.",
         "country":"Bangladesh",
         "price":5000,
-        "img":"https://i.ibb.co/nmnH1hf/bichanakandi.jpg"
+        "img":"https://i.ibb.co/znxG4cn/thanchi.jpg"
     }
 ]
+
+// https://i.ibb.co/qYpcRX8/bandarban.jpg
+// https://i.ibb.co/b5pyBfY/kuakata.jpg
+// https://i.ibb.co/93hqWF2/sajek.jpg
+// https://i.ibb.co/h1XJXbc/teknaf.jpg
+// https://i.ibb.co/znxG4cn/thanchi.jpg

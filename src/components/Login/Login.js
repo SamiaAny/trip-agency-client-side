@@ -24,9 +24,9 @@ const Login = () => {
             .finally(()=>setIsLoading(false))
     }
     return (
-        <div className="d-flex justify-content-center align-items-center">
-            <div className="box">
-                <h1 className="text-center my-5">Please Log in</h1>
+        <div className="d-flex justify-content-center align-items-center login-part">
+            <div className="box border shadow-lg">
+                <h1 className="text-center mb-5">Please Log in</h1>
                 <button onClick={handleGoogleSignin} className="btn btn-outline-primary"><i className="bi bi-google me-2"></i>Sign in with Google</button>
             </div>
         </div>
