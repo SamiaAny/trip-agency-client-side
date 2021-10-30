@@ -1,8 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Banner from './pages/Home/Banner/Banner';
 import Navmenu from './components/Navmenu/Navmenu';
-// import AllTourPackages from './pages/AllTourPackages/AllTourPackages';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import BookingPackage from './pages/BookingPackage/BookingPackage';
 import Home from './pages/Home/Home/Home';
@@ -17,6 +15,7 @@ import Blog from './pages/Home/Blog/Blog';
 import About from './pages/Home/About/About';
 import Footer from './components/Footer/Footer';
 import MyOrder from './pages/MyOrder/MyOrder';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -58,6 +57,9 @@ function App() {
             <PrivateRoute path="/myorder">
               <MyOrder></MyOrder>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

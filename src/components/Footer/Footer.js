@@ -13,10 +13,10 @@ const Footer = () => {
                     <div className="footer-menu">
                         <ul className="text-center">
                             <li className="menu-item">Home</li>
-                            <li className="menu-item">TravelBlog</li>
+                            <li className="menu-item">Blog</li>
                             <li className="menu-item">About</li>
-                            <li className="menu-item">TourPackages</li>
-                            <li className="menu-item">TravelGallery</li>
+                            <li className="menu-item">Tour Packages</li>
+                            <li className="menu-item">Travel Gallery</li>
                         </ul>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
@@ -14,7 +14,7 @@ const BookingPackage = () => {
     const [phone, setPhone] = useState("");
     const [date, setDate] = useState("");
     const [packageName, setPackageName] = useState("");
-    const { control: editControl, register, handleSubmit, reset, formState: { errors } } = useForm({
+    const { register, handleSubmit, reset, formState: { errors } } = useForm({
         defaultValues: {
             packagename: "",
         }
@@ -93,7 +93,7 @@ const BookingPackage = () => {
                             <h6>{packageDetails?.location},{packageDetails?.country}</h6>
                             <p>{packageDetails?.description}</p>
                             <h5>Duration: {packageDetails?.duration}</h5>
-                            <h5></h5>
+                            <h5>Price: Tk.{packageDetails?.price}</h5>
                         </div>
                     </div>
                     <div className="col-md-6">
@@ -112,7 +112,7 @@ const BookingPackage = () => {
                                     <input placeholder="Your phone" type="number" {...register("phone", { required: true })} /><br />
                                     <input type="date"  {...register("time", { required: true })} />
                                     <br />
-                                    <input type="submit" />
+                                    <input type="submit" className="btn btn-dark"/>
                                 </form>
                             </div>
                         </div>
