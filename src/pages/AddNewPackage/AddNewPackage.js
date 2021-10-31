@@ -6,7 +6,7 @@ const AddNewPackage = () => {
     // const [newPackage,setNewPackage] = useState({});
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = (data) => {
-        console.log(data);
+        // console.log(data);
         fetch('https://agile-basin-07002.herokuapp.com/packages', {
             method: 'POST',
             headers: {
@@ -16,7 +16,7 @@ const AddNewPackage = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
+                // console.log(result);
                 if (result.insertedId) {
                     alert('successfully added');
                     reset();

@@ -8,12 +8,12 @@ const BookingPackage = () => {
     const { bookingId } = useParams();
     const [packageDetails, setPackageDetails] = useState({});
     const { user } = useAuth();
-    const [bookingInfo,setBookingInfo] = useState({});
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [date, setDate] = useState("");
-    const [packageName, setPackageName] = useState("");
+    // const [bookingInfo,setBookingInfo] = useState({});
+    // const [name, setName] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [phone, setPhone] = useState("");
+    // const [date, setDate] = useState("");
+    // const [packageName, setPackageName] = useState("");
     const { register, handleSubmit, reset, formState: { errors } } = useForm({
         defaultValues: {
             packagename: "",
@@ -24,7 +24,7 @@ const BookingPackage = () => {
         fetch(`https://agile-basin-07002.herokuapp.com/packages/${bookingId}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setPackageDetails(data);
             })
     }, []);
@@ -61,15 +61,14 @@ const BookingPackage = () => {
 
     const onSubmit = data => {
         data.status= "pending";
-        console.log(data);
-        setBookingInfo(data);
+        // console.log(data);
         fetch('https://agile-basin-07002.herokuapp.com/allBookings',{
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
         }).then(res => res.json())
             .then(result => {
-                console.log(result);
+                // console.log(result);
                 if(result.insertedId) {
                     alert("Your order is being proceed to confirm successfully");
                     reset();

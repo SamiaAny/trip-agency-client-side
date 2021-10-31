@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const SinglePackage = (props) => {
-    console.log(props);
+    // console.log(props);
     const { name, description, img, duration, groupSize, _id } = props.package;
     return (
         <>

@@ -13,19 +13,20 @@ const MyOrder = () => {
         fetch(`https://agile-basin-07002.herokuapp.com/allBookings/${user?.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setMyBookings(data);
                 setIsLoading(false);
             })
     }, [control]);
 
+    //for update status
     const handleUpdate = id => {
         const url = `https://agile-basin-07002.herokuapp.com/allBookings/${id}`;
         fetch(url, { method: 'PUT'})
         .then(res=> res.json())
         .then(data => {
-            console.log('comming')
-            console.log(data);
+            // console.log('comming')
+            // console.log(data);
             if(data.modifiedCount > 0) {
                 setControl(!control);
             }
@@ -36,10 +37,11 @@ const MyOrder = () => {
         });
     }
 
+    //for delete booking
     const handleDeleteBooking = (id) => {
-        console.log(id)
+        // console.log(id)
         const proceed = window.confirm('Are you sure?');
-        console.log(proceed);
+        // console.log(proceed);
         if (proceed) {
             fetch(`https://agile-basin-07002.herokuapp.com/allBookings/${id}`,
                 {
