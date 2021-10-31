@@ -103,23 +103,6 @@ const MyOrder = () => {
                     ))
                 }
             </Table>
-            {/* <table>
-                <thead>
-                    <tr>
-                        <th>index</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Package</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Date</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table> */}
         </div>
     );
 };

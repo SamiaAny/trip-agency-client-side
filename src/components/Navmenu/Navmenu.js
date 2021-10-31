@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Navmenu.css';
-// import useFirebase from '../../hooks/useFirebase';
 import useAuth from '../../hooks/useAuth';
 
 const Navmenu = () => {
@@ -32,7 +31,6 @@ const Navmenu = () => {
                                 user?.email ? <Button onClick={logOut} variant="outline-light">Logout</Button> :
                                 <Nav.Link as={Link} to="/login">Login</Nav.Link>
                             }
-                            {/* <Nav.Link href="/addPackage">Add New Package</Nav.Link> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

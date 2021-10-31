@@ -8,12 +8,7 @@ const BookingPackage = () => {
     const { bookingId } = useParams();
     const [packageDetails, setPackageDetails] = useState({});
     const { user } = useAuth();
-    // const [bookingInfo,setBookingInfo] = useState({});
-    // const [name, setName] = useState("");
-    // const [email, setEmail] = useState("");
-    // const [phone, setPhone] = useState("");
-    // const [date, setDate] = useState("");
-    // const [packageName, setPackageName] = useState("");
+
     const { register, handleSubmit, reset, formState: { errors } } = useForm({
         defaultValues: {
             packagename: "",
@@ -29,6 +24,7 @@ const BookingPackage = () => {
             })
     }, []);
 
+    //for default values setting
     useEffect(() => {
         let defaults = {
             packagename: packageDetails?.name,
@@ -36,28 +32,8 @@ const BookingPackage = () => {
             email: user?.email
         }
         reset(defaults);
-    }, [packageDetails, user, reset])
+    }, [packageDetails, user, reset]);
 
-    // const handlePackageNameChange = e => {
-    //     console.log(e.target.value);
-    // }
-    // const handleNameChange = e => {
-    //     console.log(e.target.value);
-    // }
-    // const handleEmailChange = e => {
-    //     console.log(e.target.value);
-    // }
-    // const handlePhoneChange = e => {
-    //     console.log(e.target.value);
-    // }
-    // const handleDateChange = e => {
-    //     console.log(e.target.value);
-    // }
-
-    // const handleOnSubmit = e => {
-    //     e.preventDefalt();
-    //     console.log('clicked');
-    // }
 
     const onSubmit = data => {
         data.status= "pending";
@@ -116,20 +92,6 @@ const BookingPackage = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="col-md-6">
-                        <div className="border p-3">
-                            <h2>Book this package</h2>
-                            <form onSubmit={handleOnSubmit}>
-                               <input type="text" onBlur={handleNameChange} />
-                               <input type="email" onBlur={handleEmailChange} />
-                               <input type="number" name="" id="" placeholder="your phone" onBlur={handlePhoneChange} />
-                               <input type="date" name="" id="" onBlur={handleDateChange}/>
-                               <br />
-                               <input type="text" value={packageDetails?.name|| ''} onBlur={handlePackageNameChange} required/><br/>
-                               <input type="submit" value="submit" />
-                            </form>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </div>

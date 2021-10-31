@@ -15,13 +15,6 @@ const useFirebase = () => {
         setIsLoading(true);
         const provider = new GoogleAuthProvider();
         return signInWithPopup(auth, provider);
-            // .then(result => {
-            //     console.log(result.user);
-            //     setUser(result.user);
-            // })
-            // .catch((error) => {
-            //     console.log(error.message);
-            // })
     };
 
     //set observer

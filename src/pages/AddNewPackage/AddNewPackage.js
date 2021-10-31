@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 
 
 const AddNewPackage = () => {
-    // const [newPackage,setNewPackage] = useState({});
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = (data) => {
         // console.log(data);

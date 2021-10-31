@@ -35,9 +35,6 @@ const PhotoGallery = () => {
                         <div className="col">
                             <img src={galleryImg3} className="img-thumbnail" alt="" />
                         </div>
-                        {/* <div className="col">
-                            <img src={galleryImg4} alt="" />
-                        </div> */}
                     </div>
                 </div>
             </div>
